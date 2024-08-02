@@ -45,6 +45,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@lucia-auth/adapter-drizzle": "^1.0.7",
 		"drizzle-orm": "^0.31.2",
 		"lucia": "^3.2.0",
 		"paneforge": "^0.0.5",

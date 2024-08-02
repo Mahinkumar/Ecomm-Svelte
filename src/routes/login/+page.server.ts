@@ -31,5 +31,6 @@ export const actions = {
         for (const [key, value] of Object.entries(details)) {
             user_data[key] = data.get(key);
         }
+        
 	}
 };
