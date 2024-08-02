@@ -46,6 +46,7 @@
 	"type": "module",
 	"dependencies": {
 		"drizzle-orm": "^0.31.2",
+		"lucia": "^3.2.0",
 		"paneforge": "^0.0.5",
 		"postgres": "^3.4.4",
 		"svelte-french-toast": "^1.2.0"
