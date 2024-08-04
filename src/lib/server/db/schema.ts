@@ -4,9 +4,7 @@ import { drizzle } from "drizzle-orm/node-postgres";
 import { db } from '.';
 import { details } from '$lib/config';
 
-
-
-const userTable = pgTable("user", {
+export const userTable = pgTable("user", {
 	id: text("id").primaryKey(),
 	hash: text("hash").notNull(),
 	email: text("email").notNull(),
@@ -17,7 +15,7 @@ const userTable = pgTable("user", {
 	phone: text("phone").notNull()
 });
 
-const sessionTable = pgTable("session", {
+export const sessionTable = pgTable("session", {
 	id: text("id").primaryKey(),
 	userId: text("user_id")
 		.notNull()
@@ -28,7 +26,7 @@ const sessionTable = pgTable("session", {
 	}).notNull()
 });
 
-export const adapter = new DrizzlePostgreSQLAdapter(db, sessionTable, userTable);
+//export const adapter = new DrizzlePostgreSQLAdapter(db, sessionTable, userTable);
 
 
 

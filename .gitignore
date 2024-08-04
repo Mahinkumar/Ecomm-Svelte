@@ -6,6 +6,9 @@ node_modules
 /.svelte-kit
 /build
 
+#Drizzle
+/drizzle
+
 # OS
 .DS_Store
 Thumbs.db
