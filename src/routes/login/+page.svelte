@@ -1,7 +1,11 @@
 <script lang="ts">
 	import Logo from '$lib/components/Logo.svelte';
-	export let data;
+	import type { ActionData } from "./$types";
+	import { enhance } from "$app/forms";
 
+	export let form: ActionData;
+	export let data;
+	
 	let is_signup: boolean = true;
 
 	function toggle() {
@@ -25,7 +29,7 @@
 			</h1>
 		</div>
 
-		<form method="post" class="h-3/4">
+		<form method="post" class="h-3/4"  use:enhance>
 			<div class="flex h-[100%] flex-col items-center justify-center text-2xl">
 				<input
 					required
@@ -60,6 +64,7 @@
 					class="m-2 mb-6 mt-10 w-[80%] rounded-lg bg-orange-600 p-2 text-xl text-white"
 					formaction="?/register">Login</button
 				>
+				<p>{form?.message ?? ""}</p>
 			</div>
 		</form>
 	</div>

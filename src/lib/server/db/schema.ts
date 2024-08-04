@@ -1,15 +1,13 @@
-import { pgTable, serial, text, integer,timestamp } from 'drizzle-orm/pg-core';
+import { pgTable, text, timestamp } from 'drizzle-orm/pg-core';
 import { DrizzlePostgreSQLAdapter } from "@lucia-auth/adapter-drizzle";
-import { drizzle } from "drizzle-orm/node-postgres";
 import { db } from '.';
-import { details } from '$lib/config';
 
 export const userTable = pgTable("user", {
 	id: text("id").primaryKey(),
 	hash: text("hash").notNull(),
 	email: text("email").notNull(),
 
-	//Change your db config according to your detauils in config.js
+	//Change your db config according to your details in config.js
 	name: text("name").notNull(),
 	address: text("address").notNull(),
 	phone: text("phone").notNull()
@@ -26,7 +24,7 @@ export const sessionTable = pgTable("session", {
 	}).notNull()
 });
 
-//export const adapter = new DrizzlePostgreSQLAdapter(db, sessionTable, userTable);
+export const adapter = new DrizzlePostgreSQLAdapter(db, sessionTable, userTable);
 
 
 
