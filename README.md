@@ -4,7 +4,7 @@
 
 
 # Ecommerce Website Built with Sveltekit
-A self Hostable ecommerce website solution powered by <a href="https://kit.svelte.dev/">Sveltekit<a>, 
+A Self Hostable E-Commerce website solution powered by <a href="https://kit.svelte.dev/">Sveltekit<a>, 
 <a href="https://orm.drizzle.team/">Drizzle ORM<a> and <a href="https://www.postgresql.org/">PostgreSQL<a>.
 Authentication with <a href="https://lucia-auth.com">lucia Auth</a>
 
