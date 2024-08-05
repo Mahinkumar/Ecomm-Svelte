@@ -18,7 +18,7 @@
             bg-white text-5xl dark:bg-neutral-900"
 >
 	<div
-		class="flex min-h-80 w-96 flex-col rounded-md shadow-lg shadow-black/20 ring-1 ring-neutral-200 transition-all duration-500 dark:shadow-orange-500/20 dark:ring-neutral-700"
+		class="flex min-h-80 w-96 flex-col rounded-md lg:md:shadow-lg shadow-none shadow-black/20 lg:md:ring-1 ring-0 ring-neutral-200 transition-all duration-500 dark:shadow-orange-500/20 dark:ring-neutral-700"
 	>
 		<div class="flex h-1/4 flex-col items-center justify-center">
 			<!--Title: Customize any part of the Logo component with specific classes-->
