@@ -14,6 +14,6 @@ export const icon_path = "Svelte_Logo.svg"
 export const details = {
     name: 'text',
     address: 'text',
-    phone: 'number'
+    phone: 'text'
 }
 ///////////////////////////////////////////////////////////////////////
