@@ -62,7 +62,7 @@
 				{/if}
 				<button
 					class="m-2 mb-6 mt-10 w-[80%] rounded-lg bg-orange-600 p-2 text-xl text-white"
-					formaction="?/register">Login</button
+					formaction="{is_signup ? '?/register':'?/login'}">{is_signup ? 'Register':'Login'}</button
 				>
 				<p>{form?.message ?? ""}</p>
 			</div>

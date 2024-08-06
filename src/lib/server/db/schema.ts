@@ -2,7 +2,7 @@ import { pgTable, text, timestamp } from 'drizzle-orm/pg-core';
 import { DrizzlePostgreSQLAdapter } from "@lucia-auth/adapter-drizzle";
 import { db } from '.';
 
-export const userTable = pgTable("user", {
+export const userTable = pgTable("userTable", {
 	id: text("id").primaryKey(),
 	hash: text("hash").notNull(),
 	email: text("email").notNull(),
