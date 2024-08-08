@@ -52,9 +52,7 @@ export const actions: Actions = {
 		for (const [key, value] of Object.entries(details)) {
 			user_data[key] = formData.get(key);
 		}
-
-		console.log(user_data);
-
+		
 		await db.insert(userTable).values({
 			id: user_data.id,
 			hash: user_data.hash,
@@ -72,8 +70,7 @@ export const actions: Actions = {
 			...sessionCookie.attributes
 		});
 
-		console.log("Nothing");
-		redirect(301,"/hello");
+		redirect(302,"/");
 	},
 
 
