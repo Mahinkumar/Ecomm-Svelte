@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Logo from '$lib/components/Logo.svelte';
-	import type { ActionData } from "./$types";
-	import { enhance } from "$app/forms";
+	import type { ActionData } from './$types';
+	import { enhance } from '$app/forms';
 
 	export let form: ActionData;
 	export let data;
-	
-	let is_signup: boolean = true;
+
+	let is_signup: boolean = false;
 
 	function toggle() {
 		is_signup = !is_signup;
@@ -18,7 +18,7 @@
             bg-white text-5xl dark:bg-neutral-900"
 >
 	<div
-		class="flex min-h-80 w-96 flex-col rounded-md lg:md:shadow-lg shadow-none shadow-black/20 lg:md:ring-1 ring-0 ring-neutral-200 transition-all duration-500 dark:shadow-orange-500/20 dark:ring-neutral-700"
+		class="flex min-h-80 w-96 flex-col rounded-md shadow-none shadow-black/20 ring-0 ring-neutral-200 transition-all duration-500 lg:md:ring-1 lg:md:shadow-lg dark:shadow-orange-500/20 dark:ring-neutral-700"
 	>
 		<div class="flex h-1/4 flex-col items-center justify-center">
 			<!--Title: Customize any part of the Logo component with specific classes-->
@@ -27,9 +27,10 @@
 				{is_signup ? 'Have an account already?' : "Don't have an account yet?"}
 				<button class="font-bold" on:click={toggle}>{!is_signup ? 'Sign up' : 'Login'}</button>
 			</h1>
+			<h1 class="text-xl text-red-600">{form?.message ?? ''}</h1>
 		</div>
 
-		<form method="post" class="h-3/4"  use:enhance>
+		<form method="post" class="h-3/4" use:enhance>
 			<div class="flex h-[100%] flex-col items-center justify-center text-2xl">
 				<input
 					required
@@ -62,9 +63,10 @@
 				{/if}
 				<button
 					class="m-2 mb-6 mt-10 w-[80%] rounded-lg bg-orange-600 p-2 text-xl text-white"
-					formaction="{is_signup ? '?/register':'?/login'}">{is_signup ? 'Register':'Login'}</button
+					formaction={is_signup ? '?/register' : '?/login'}
+					>{is_signup ? 'Register' : 'Login'}</button
 				>
-				<p>{form?.message ?? ""}</p>
+				
 			</div>
 		</form>
 	</div>
