@@ -1,3 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer components {
+    .pb{
+      @apply  ring-1 dark:ring-white ring-black;
+    }
+  }
